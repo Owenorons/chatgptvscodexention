@@ -1,0 +1,97 @@
+{
+  "name": "chatgptcodenizer",
+  "displayName": "ChatGPT Codenizer",
+  "description": "ChatGPT Magic Wand",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "chatgpt.ask",
+        "title": "Ask ChatGPT"
+      },
+      {
+        "command": "chatgpt.setApiKey",
+        "title": "Set OpenAI API Key"
+      },
+      {
+        "command": "chatgpt.fixCode",
+        "title": "ChatGPT: Fix Code"
+      },
+      {
+        "command": "chatgpt.analyzeCode",
+        "title": "ChatGPT: Analyze Code"
+      },
+      {
+        "command": "chatgpt.improveCode",
+        "title": "ChatGPT: Improve Code"
+      },
+      {
+        "command": "chatgpt.debugCode",
+        "title": "ChatGPT: Debug Code"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "ChatGPT Settings",
+      "properties": {
+        "chatgpt.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your OpenAI API Key"
+        },
+        "chatgpt.maxTokens": {
+          "type": "number",
+          "default": 100,
+          "description": "Maximum tokens for ChatGPT responses"
+        },
+        "chatgpt.temperature": {
+          "type": "number",
+          "default": 0.5,
+          "description": "Temperature for ChatGPT responses"
+        },
+        "chatgpt.engine": {
+          "type": "string",
+          "default": "davinci-codex",
+          "description": "OpenAI engine to use"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
+    "package": "webpack --mode production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.91.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "marked": "^13.0.2"
+  }
+}
