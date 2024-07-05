@@ -3,7 +3,7 @@
   "displayName": "ChatGPT Codenizer",
   "description": "ChatGPT Magic Wand",
   "version": "0.0.1",
-  "publisher": "Owen oronsaye Uwahen",
+  "publisher": "OwenOronsayeUwahen",
   "engines": {
     "vscode": "^1.91.0"
   },
