@@ -3,6 +3,7 @@
   "displayName": "ChatGPT Codenizer",
   "description": "ChatGPT Magic Wand",
   "version": "0.0.1",
+  "publisher": "Owen oronsaye Uwahen",
   "engines": {
     "vscode": "^1.91.0"
   },
@@ -93,5 +94,9 @@
   "dependencies": {
     "axios": "^1.7.2",
     "marked": "^13.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Owenorons/chatgptvscodexention.git"
   }
 }
