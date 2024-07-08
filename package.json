@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "OwenOronsayeUwahen",
   "engines": {
-    "vscode": "^1.91.0"
+    "vscode": "^1.90.2"
   },
   "categories": [
     "Other"
